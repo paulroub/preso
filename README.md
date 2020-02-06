@@ -98,7 +98,7 @@ Loading that page will give you a sanity check (confirming that we found your de
 </figure>
 
 ## Contributing
-Pull requests are welcome. Bug reports are welcome. Feature requests will be entertained if they seem like fun and I'm on a plane (or if it
+Pull requests are welcome. Bug reports are welcome. Feature requests will be entertained if they sound like fun and I'm on a plane (or if it
 seems like they'd lead to a blog post).
 
 ## Acknowledgements
