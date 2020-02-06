@@ -1,0 +1,71 @@
+@import 'slide.scss';
+
+$error-fg: #600;
+$error-bg: #F0F0F0;
+
+body {
+  padding: 50px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #FFF;
+  color: #000;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.commitlist {
+  list-style: none;
+}
+
+.commit {
+  padding: .5em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: yellow;
+  }
+
+  &.current {
+    background-color: orange;
+  }
+}
+
+.slide {
+  display: flex;
+}
+
+.notes {
+  margin-right: 2em;
+  padding: 1em;
+  font-size: 32px;
+  width: 60%;
+}
+
+.slidecontent {
+  width: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
+kbd {
+  padding: 0 6px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: #F0F0F0;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.error {
+  margin: 1em 0;
+  background-color: $error-bg;
+  color: $error-fg;
+  padding: .25em;
+}
+
+.error + .error {
+  margin-top: -1em;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Presentation</title>
+        <link rel="stylesheet" href="/stylesheets/slide.css">
+        <link rel="stylesheet" href="/highlight/highlight.css" />
+        <script src="/highlight/highlight.js"></script>
+
+    </head>
+
+    <body class=slidecontent>
+    </body>
+
+        <script>
+
+document.body.addEventListener('keydown', (evt) => {
+    if (evt.ctrlKey || evt.metaKey || evt.altKey) {
+        return;
+    }
+
+    const code = evt.which;
+
+    const forwards = [
+        32, // space
+        74, // j
+        39, // right
+        40, // down
+        34 // pgdn
+    ];
+    const backs = [
+        75, // k
+        8, // backspace
+        37, // left
+        38, // up
+        33 // pgup
+    ];
+
+    if (forwards.indexOf(code) >= 0) {
+        evt.stopPropagation();
+        evt.preventDefault();
+
+        window.opener.moveNext();
+    }
+    else if (backs.indexOf(code) >= 0) {
+        evt.stopPropagation();
+        evt.preventDefault();
+
+        window.opener.movePrev();
+    }
+});
+        </script>
+        </html>

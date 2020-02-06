@@ -1,0 +1,135 @@
+$slidebg: #0C000C;
+$slidefg: #FFF;
+$codebg: #333;
+$codefg: #0C0;
+$size: 36pt;
+$headcolor: yellow;
+$page-margin: 0;
+$quote-margin: 3em;
+$failfg: #F00;
+$slide-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+body,
+html {
+  margin: $page-margin;
+  background-color: $slidebg;
+  font-size: $size;
+  box-sizing: border-box;
+}
+
+.slidecontent {
+  background-color: $slidebg;
+  color: $slidefg;
+  padding: 1em;
+  font-family: $slide-font;
+  font-weight: 300;
+  box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    font-weight: normal;
+    color: $headcolor;
+  }
+
+  pre {
+    font-family: monaco, consolas, 'Courier New', Courier, monospace;
+    background-color: $codebg;
+    color: $codefg;
+    font-size: 80%;
+    padding: .1em;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  cite {
+    display: block;
+    margin-right: $quote-margin;
+    text-align: right;
+  }
+
+  blockquote {
+    margin: 0 $quote-margin ($quote-margin / 2) $quote-margin;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: 300%;
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "“";
+      margin-right: 10px;
+      right: 100%;
+      top: 0;
+    }
+
+    &::after {
+      content: "”";
+      margin-left: 10px;
+      left: 100%;
+      bottom: -.5em;
+      top: auto;
+    }
+  }
+}
+
+
+.fail {
+  color: $failfg;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  height: 12em;
+  width: 12em;
+}
+
+.subtitle {
+  margin: 0 4em;
+  text-align: center;
+}
+
+.contact {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  list-style: none;
+  text-align: right;
+
+  li {
+    margin: .25em 0 0 0;
+  }
+}
+
+.strike {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #900;
+}
+
+.addition {
+  color: #0F0;
+}
+
+li {
+  margin: .75em 0;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  color: lightblue;
+  text-decoration: none;
+}

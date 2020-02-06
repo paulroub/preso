@@ -1,0 +1,60 @@
+<html>
+<head><title>Pres notes</title></head>
+<link rel=stylesheet type="text/css" href="/stylesheets/style.css" />
+
+<body>
+
+<div class=slide data-sha="">
+    <div class=notes>
+        <p>Each slide has a div with class "notes". Whatever is in that div will take up the left
+        side of your presenter view.</p>
+        <p>Leave it blank if you like.</p>
+        <p>Press the spacebar, PgDn, etc. to advance to the next slide.</p>
+    </div>
+
+    <div class=slidecontent>Read the notes</div>
+</div>
+
+<div class=slide data-sha="">
+    <div class=notes>
+        <p>The slide has the good stuff this time.</p>
+        <p>Backspace, left, etc. to return to the previous slide.</p>
+    </div>
+    <div class=slidecontent>
+        <h2>Slide Content</h2>
+        <p>Each slide also has a "slidecontent" div. Guess what goes there?</p>
+        <p>Within that div, you can optionally include an <code>h2</code> tag, which
+        will be used as the slide's title.</p>
+        <p>Slide content will take up the full view in your presentation window (of course), and also
+        be shown at reduced size to the right of your screen.</p>
+
+    </div>
+</div>
+
+
+<div class=slide data-sha="">
+    <div class=notes>
+        Notice that navigation keys work in either window.
+    </div>
+    <div class=slidecontent>
+        <h2>SHAs</h2>
+        <p>If your slide has a "data-sha" attribute, we will attempt to check out the matching
+        commit in your demo folder.</p>
+        <p>e.g., given this commit:</p>
+        <pre>commit f2e90db55fbb0cf22e210ef51f17981303f30f90
+Author: Some One <someone@example.com>
+
+Smarter clean-file detection</pre>
+
+        <p>You'd want a slide like:</p>
+        <pre><code>&lt;div
+   class=slide
+   data-sha="f2e90db55fbb0cf22e210ef51f17981303f30f90"&gt;</code></pre>
+    </div>
+
+</div>
+
+<script src=/javascripts/preso.js></script>
+
+</body>
+</html>
