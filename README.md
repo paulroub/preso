@@ -83,14 +83,18 @@ Will launch the web server, running on http://localhost:3000/
 
 Loading that page will give you a sanity check (confirming that we found your demo directory, that it's clean and free of uncommitted modifications, etc.). Click the "Begin presentation" link to load the first slide's notes and preview in the current window. A new tab (or window, depending on your browser config) will launch with the slide content. Drag that to your presentation screen, maximize, and off you go. You may need to configure your browser to hide toolbars, etc.
 
+#### Presenter View
+
 <figure>
     <img src=./i/presenter-view.png alt="Presenter view showing notes to the left, and a preview of the slide to the right">
-    <figcaption>The Presenter View</figcaption>
+    <figcaption>What you'll be looking at</figcaption>
 </figure>
+
+#### Slide View
 
 <figure>
     <img src=./i/slide-view.png alt="The presentation view, showing just the slide content, full-screen">
-    <figcaption>The Presentation View</figcaption>
+    <figcaption>What your audience will be looking at. And you won't. Because you won't be reading your slides. You're better than that.</figcaption>
 </figure>
 
 ## Contributing
