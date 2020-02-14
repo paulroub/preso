@@ -133,11 +133,29 @@ function cleanCodeBlock(win, block) {
 }
 
 function showSlide(slide) {
-    if (presWindow) {
+    if (presWindow && !presWindow.closed) {
         showSlideContents(slide, presWindow);
     }
     else {
-        presWindow = window.open('/slideshell.html', 'tddpres');
+        // Not all of these will be respected by the browser, depending on
+        // configuration, browser choice, etc. But let's leave as little
+        // as possible to manually turn off.
+        const features = {
+            location: false,
+            menubar: false,
+            resizable: true,
+            status: false,
+            titlebar: false,
+            toolbar: false
+        };
+
+        const featureStr = Object.entries(features)
+            .map(([feature, enabled]) => {
+                return `${feature}=${enabled ? 1 : 0}`;
+            })
+            .join(',');
+
+        presWindow = window.open('/slideshell.html', 'tddpres', featureStr);
 
         setTimeout(() => {
             showSlideContents(slide, presWindow);
