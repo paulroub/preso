@@ -117,6 +117,8 @@ function showSlideContents(slide, win) {
     [...win.document.querySelectorAll('pre code')].forEach((block) => {
         cleanCodeBlock(win, block);
     });
+
+    win.adjustHeight();
 }
 
 

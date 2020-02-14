@@ -9,12 +9,15 @@ $quote-margin: 3em;
 $failfg: #F00;
 $slide-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   margin: $page-margin;
   background-color: #FFF;
   font-size: $size;
-  box-sizing: border-box;
 }
 
 .slide {
@@ -28,7 +31,6 @@ html {
   padding: 1em;
   font-family: $slide-font;
   font-weight: 300;
-  box-sizing: border-box;
 
   h2 {
     text-align: center;

@@ -68,4 +68,3 @@ function adjustHeight() {
     const winHeight = window.innerHeight;
     slide.style.minHeight = winHeight + 'px';
 }
-

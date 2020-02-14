@@ -1,20 +1,26 @@
 $slidebg: #0C000C;
-$slidefg: #FFF;
-$codebg: #333;
-$codefg: #0C0;
-$size: 36pt;
-$headcolor: yellow;
+$slidefg: #CCC;
+$codebg: #202020;
+$codefg: darken(#0C0, 10%);
+$size: 34pt;
+$headcolor: #34A5DA;
 $page-margin: 0;
 $quote-margin: 3em;
 $failfg: #F00;
 $slide-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$slide-title-font: "DIN Alternate", "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$slide-title-size: 1.75em;
+$code-font: monaco, consolas, 'Courier New', Courier, monospace;
+
+* {
+  box-sizing: border-box;
+}
 
 body,
 html {
   margin: $page-margin;
   background-color: $slidebg;
   font-size: $size;
-  box-sizing: border-box;
 }
 
 .slidecontent {
@@ -23,22 +29,27 @@ html {
   padding: 1em;
   font-family: $slide-font;
   font-weight: 300;
-  box-sizing: border-box;
 
   h2 {
-    text-align: center;
+    margin: 0 0 1em 0;
+    text-align: left;
     font-weight: normal;
     color: $headcolor;
+    font-family: $slide-title-font;
+    font-size: $slide-title-size;
+    font-variant: small-caps;
+    border-bottom: 1px solid $headcolor;
   }
 
   pre {
-    font-family: monaco, consolas, 'Courier New', Courier, monospace;
+    font-family: $code-font;
     background-color: $codebg;
     color: $codefg;
     font-size: 80%;
     padding: .1em;
     max-width: 100%;
     overflow: auto;
+    border: 1px solid lighten($codebg, 20%);
   }
 
   .hidden {

@@ -48,5 +48,31 @@ document.body.addEventListener('keydown', (evt) => {
         window.opener.movePrev();
     }
 });
+
+function adjustHeight() {
+    const winHeight = window.innerHeight;
+    const slide = document.body;
+    const slideHeight = slide.offsetHeight;
+
+    const excess = (slideHeight + 1) - winHeight;
+    const leeway = 10;
+
+    if (excess <= leeway) {
+        return;
+    }
+
+    const pres = [...slide.querySelectorAll('pre')];
+
+    const largest = pres.reduce((prevLargest, pre) => {
+        return (pre.offsetHeight > prevLargest.offsetHeight) ? pre : prevLargest;
+    });
+
+    let newHeight = largest.offsetHeight - excess;
+    newHeight = Math.max(newHeight, 100);
+    if (newHeight < largest.offsetHeight) {
+        largest.style.height = `${newHeight}px`;
+    }
+}
+
         </script>
         </html>
