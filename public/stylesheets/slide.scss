@@ -11,6 +11,7 @@ $slide-font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 $slide-title-font: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $slide-title-size: 1.75em;
 $code-font: monaco, consolas, 'Courier New', Courier, monospace;
+$hidden-preview: darken(yellow, 25%);
 
 * {
   box-sizing: border-box;
@@ -53,6 +54,11 @@ html {
   }
 
   .hidden {
+    color: $hidden-preview;
+    opacity: .75;
+  }
+
+  &.presentation .hidden {
     display: none;
   }
 
