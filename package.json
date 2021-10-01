@@ -17,7 +17,7 @@
     "nodegit": "^0.26.5"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.32",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "jest": "^27"
