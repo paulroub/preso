@@ -14,7 +14,7 @@
     "liquidjs": "^9.26.0",
     "morgan": "~1.10",
     "node-sass-middleware": "0.11.0",
-    "nodegit": "^0.26.5"
+    "nodegit": "^0.27"
   },
   "devDependencies": {
     "eslint": "^7.32",
