@@ -38,7 +38,6 @@ document.body.addEventListener('keydown', (evt) => {
     }
 });
 
-
 function moveNext() {
     const nextSlide = current + 1;
     const isNextSlide = nextSlide < slides.length;
@@ -120,7 +119,6 @@ function showSlideContents(slide, win) {
 
     win.adjustHeight();
 }
-
 
 function cleanCodeBlock(win, block) {
     const rawHtml = block.innerHTML;
@@ -210,7 +208,6 @@ function loadSlide(slideNo, hideLists) {
 
     activate(slide);
 }
-
 
 function queryParam(name) {
     const str = (window.location.search || '').replace(/^\?/, '');
