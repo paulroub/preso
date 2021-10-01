@@ -6,14 +6,14 @@
 
 <h2>Working folder: {{ gitRoot }}</h2>
 
-{% if !isValidRepo %}
+{% if isValidRepo != true %}
     <p>Does not appear to be a Git working folder</p>
 {% endif %}
 {% for error in errors %}
     <p class=error>{{ error }}</p>
 {% endfor %}
 
-{% if isValidRepo && isClean %}
+{% if isValidRepo and isClean %}
     <p>Clicking "Begin presentation" will:</p>
     <ol>
         <li>Create a new window (or tab) to contain the presentation slides</li>

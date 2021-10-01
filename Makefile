@@ -14,7 +14,7 @@ build:
 		node tools/build.js :common
 	mkdir -p public/highlight
 	cp highlight.js/build/demo/styles/default.css public/highlight/highlight.css
-	cp highlight.js/build/highlight.pack.js public/highlight/highlight.js
+	cp highlight.js/build/highlight.js public/highlight/highlight.js
 
 export:
 	mkdir -p _export/images _export/scripts _export/tddmash
