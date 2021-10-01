@@ -1,7 +1,6 @@
 lint:
 	npx eslint -c .eslintrc-node.js app.js routes tests
 	npx eslint public/javascripts
-	sass-lint public/stylesheets/*.scss -v
 
 run:	build
 	npm start &
