@@ -15,19 +15,22 @@
 
 <div class=slide data-sha="">
     <div class=notes>
-        This is a terrible title. But the emphasis on *your* time / sanity are important.
+        Assumptions behind the title:
+
+        <ul>
+            <li>You're aware it's considered valuable</li>
+            <li>But you have some good-faith objections</li>
+            <li>Which are absolutely not unique, don't worry</li>
+            <li>There's a QR code later</li>
+        </ul>
     </div>
 
     <div class=slidecontent>
-        <h2>Test-Driven Development</h2>
-        <p class=subtitle>save your time, save your sanity, write great code fast</p>
+        <h2>Test-Driven Development for Skeptics</h2>
 
         <ul class=contact>
             <li>Paul Roub</li>
             <li>Senior Software Engineer at Honor</li>
-            <li>@paulroub</li>
-            <li>paul@roub.net</li>
-            <li>https://roub.net/</li>
         </ul>
     </div>
 </div>
@@ -35,7 +38,7 @@
 <div class=slide>
     <div class=notes>
         <ul>
-        <p >… adds useless overhead</p>
+        <p >… adds needless overhead</p>
         <p >… interrupts my workflow</p>
         <p >… slows me down</p>
         <p>… anyway, I already have regression tests</p>
@@ -44,7 +47,7 @@
     <div class=slidecontent>
         <h2>Yeah, but TDD…</h2>
 
-        <p class=step>… adds meaningless overhead</p>
+        <p class=step>… adds needless overhead</p>
         <p class=step>… interrupts my workflow</p>
         <p class=step>… slows me down</p>
         <p class=step>… anyway, I already have regression tests</p>
@@ -53,15 +56,18 @@
 
 <div class=slide data-sha="">
     <div class=notes>
-        (click once)
-        This is not an "eat your vegetables" talk.
-        Show of hands - who likes stopping new work to go hunt down bugs in existing code?
+        <ul>
+            <li>(click once)</li>
+            <li>This is not an "eat your vegetables" talk.</li>
+            <li>Show of hands - who likes stopping new work to go hunt down bugs in existing code?</li>
+            <li>Let's correct that last slide...</li>
+        </ul>
     </div>
 
     <div class=slidecontent>
-        <h2>Ah, But the Data!</h2>
+        <h2>Ah, But the Data and the Research!</h2>
 
-        <p>So much data!</p>
+        <p>So much data! All the research!</p>
 
         <p class=step>Just not in <em>this</em> talk.</p>
     </div>
@@ -74,11 +80,12 @@
     <div class=slidecontent>
         <h2>Yeah, but <span class=strike>TDD</span> <span class=addition>buggy, untested code</span>…</h2>
 
-        <p>… adds useless overhead</p>
+        <p>… adds needless overhead</p>
         <p>… interrupts my workflow</p>
         <p>… slows me down</p>
         <p>… <span class=strike>anyway, I already have</span> <span class=addition>forces me to write </span> regression tests
-        <span class="step addition"> for code I don't necessarily remember</span></p>
+        <span class="step addition"> for code I don't necessarily remember writing</span>
+        <span class="step addition">(or didn't write in the first place)</span></p>
     </div>
 </div>
 
@@ -98,7 +105,7 @@ npm install --save-dev jest
         </code></pre>
 
         <p class=step>It's at least that easy in your development environment of choice.</p>
-        <p class=step>There's a framework for COBOL.</p>
+        <p class=step>There's a TDD framework for COBOL.</p>
     </div>
 </div>
 
@@ -271,7 +278,6 @@ highlightTime() {
     -->
 <div class=slide data-sha="9164cb0370b16a2df0a4f27eac9a8ffa579fee9e">
     <div class=notes>
-
     </div>
 
     <div class=slidecontent>
@@ -279,8 +285,9 @@ highlightTime() {
 
         <p>I certainly don't like testing it.</p>
         <p>Writing tests means more calls, sooner, to the method in question.</p>
+        <p>"Annoying to test" usually goes hand-in-hand with "annoying to use"</p>
         <p>
-            Little annoyances become noticeable right away - this technical debt had
+            With TDD, little annoyances become noticeable right away - this technical debt had
             a lifespan of <em>minutes</em>.</p>
     </div>
 </div>
@@ -289,7 +296,7 @@ highlightTime() {
     <div class=notes>
         <p>We'll separate the "time-to-words" portion from the "display the words" portion.</p>
         <p>For the moment, we can stop caring — <em>at all</em> — about the rest.</p>
-        <p>No highlighting, none of the words <b>not</b> related to thetime.</p>
+        <p>No highlighting, none of the words <b>not</b> related to the time.</p>
     </div>
 
     <div class=slidecontent>
@@ -321,9 +328,7 @@ expect(clockwork.timeWords(time))
     </div>
 
     <div class=slidecontent>
-        <h2>One thing at a time</h2>
-
-        <p>Only test the time-to-words conversion for now, don't worry about the display.</p>
+        <h2>One thing at a time (continued)</h2>
 
         <pre><code class=lang-js>
 module.exports = {
@@ -406,7 +411,8 @@ test('another hour', () => {
     -->
 <div class=slide data-sha="a3eab0131d8c3be6961e75302a3548fac2486bea">
     <div class=notes>
-        <p>Again, the original test has value -- our new code has to pass for two different times.</p>
+        <p>Again, the original test has value -- our new code has to pass for <em>both</em> times.</p>
+        <p>Show two passing tests</p>
     </div>
 
     <div class=slidecontent>
@@ -489,7 +495,7 @@ module.exports = {
     </div>
 
     <div class=slidecontent>
-        <h2>Add some coverage</h2>
+        <h2>Confirm some assumptions</h2>
 
         <pre><code class="lang-js">
 test('midnight', () => {
@@ -666,7 +672,6 @@ function roundMinutes(minutes) {
     -->
 <div class=slide data-sha="28501677603706ff13ffedcaf728751012b6c494">
     <div class=notes>
-        Why not "change my mind" guy here? Because FTG.
     </div>
 
     <div class=slidecontent>
@@ -1801,26 +1806,6 @@ test('twenty-five past the hour', () => {
     </div>
 
     <div class=slidecontent>
-        <h2>Put it all to use</h2>
-
-        <p>In our demo web page, switch languages each time we click.</p>
-
-        <pre><code class="lang-js">
-board.addEventListener('click', () => {
-    english = !english;
-    clockwork = GetClockwork(english ? 'en' : 'es');
-    showTime();
-});
-
-        </code></pre>
-    </div>
-</div>
-
-<div class=slide data-sha="">
-    <div class=notes>
-    </div>
-
-    <div class=slidecontent>
         <h2>Like so</h2>
 
         <div class=showaclock></div>
@@ -1852,9 +1837,9 @@ board.addEventListener('click', () => {
     </div>
 
     <div class=slidecontent>
-        <h2>Slides and Code and Further Discussion</h2>
+        <h2>Slides, Code and Further Discussion</h2>
 
-            <ul class=contact>
+        <ul class=contact>
             <li>@paulroub</li>
             <li><a href="mailto:paul@roub.net">paul@roub.net</a></li>
             <li><a href="https://roub.net/momentum">roub.net/momentum</a></li>

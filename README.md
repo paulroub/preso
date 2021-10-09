@@ -46,7 +46,7 @@ The presentation is loaded from `views/pres.liquid`. That file contains example 
     <div class=notes>
         <p>We'll separate the "time-to-words" portion from the "display the words" portion.</p>
         <p>For the moment, we can stop caring — <em>at all</em> — about the rest.</p>
-        <p>No highlighting, none of the words <b>not</b> related to thetime.</p>
+        <p>No highlighting, none of the words <b>not</b> related to the time.</p>
     </div>
 
     <div class=slidecontent>
