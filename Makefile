@@ -17,10 +17,10 @@ build:
 
 export:
 	mkdir -p _export/images _export/scripts _export/tddmash
-	sass --sourcemap=none _assets/style.scss _export/style.css
+	sass --no-source-map _assets/style.scss _export/style.css
 	cp _assets/slides.js _export/scripts
 	cp -R public/images/* _export/images
 	cp -R public/tddmash/* _export/tddmash
 	rm -rf _export/tddmash/.git
 	python bin/export.py > _export/index.html
-	cd _export && zip -9rp tdd-codemash2020.zip *
+	cd _export && zip -9rp tdd-momentum2021.zip *

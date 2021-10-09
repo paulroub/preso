@@ -1,0 +1,4 @@
+beautifulsoup4~=4.7
+pylint~=2.3
+requests~=2.22
+requests-mock~=1.6
