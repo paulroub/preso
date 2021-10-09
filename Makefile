@@ -9,7 +9,7 @@ run:	build
 
 build:
 	cd highlight.js && \
-		npm install && \
+		npm ci && \
 		node tools/build.js :common
 	mkdir -p public/highlight
 	cp highlight.js/build/demo/styles/default.css public/highlight/highlight.css
